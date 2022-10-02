@@ -1,0 +1,1 @@
+include $(TOP)/bootable/u-boot/AndroidUBoot.mk

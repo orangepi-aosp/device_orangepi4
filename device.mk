@@ -1,0 +1,2 @@
+PRODUCT_PLATFORM := rk3399
+PRODUCT_HARDWARE := orangepi4_lts
