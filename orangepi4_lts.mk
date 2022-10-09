@@ -20,6 +20,3 @@ PRODUCT_DEVICE := orangepi4_lts
 PRODUCT_BRAND := orangepi
 PRODUCT_MODEL := Orange PI 4 LTS
 PRODUCT_MANUFACTURER := Xunlong
-
-UBOOT_DEFCONFIG := orangepi_4_defconfig
-UBOOT_CROSS_COMPILE_PREFIX := $(TOP)/prebuilts/gcc/linux-x86/host/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
