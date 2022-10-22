@@ -13,6 +13,8 @@
 # limitations under the License.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/xunlong/orangepi4/device.mk)
 
 PRODUCT_NAME := orangepi4_lts
@@ -20,3 +22,18 @@ PRODUCT_DEVICE := orangepi4_lts
 PRODUCT_BRAND := orangepi
 PRODUCT_MODEL := Orange PI 4 LTS
 PRODUCT_MANUFACTURER := Xunlong
+
+PRODUCT_PLATFORM := rk3399
+PRODUCT_HARDWARE := orangepi4_lts
+
+PRODUCT_BUILD_INIT_BOOT_IMAGE := true
+PRODUCT_BUILD_SYSTEM_IMAGE := true
+PRODUCT_BUILD_SYSTEM_EXT_IMAGE := true
+# PRODUCT_BUILD_CACHE_IMAGE := true
+# PRODUCT_BUILD_ODM_IMAGE := true
+# PRODUCT_BUILD_ODM_DLKM_IMAGE := true
+PRODUCT_BUILD_VENDOR_IMAGE := true
+PRODUCT_BUILD_VENDOR_DLKM_IMAGE := true
+# PRODUCT_BUILD_PRODUCT_IMAGE  := true
+# PRODUCT_BUILD_RAMDISK_IMAGE := true
+PRODUCT_BUILD_USERDATA_IMAGE := true
