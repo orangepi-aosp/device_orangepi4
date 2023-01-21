@@ -1,0 +1,2 @@
+Flash uboot to sdcard:
+sudo dd if=u-boot-rockchip.img of=/dev/sda seek=64 conv=fsync
