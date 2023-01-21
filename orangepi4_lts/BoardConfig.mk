@@ -1,4 +1,4 @@
-include device/xunlong/common/BoardConfigCommon.mk
+include device/xunlong/orangepi4/BoardConfigCommon.mk
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
