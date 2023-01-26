@@ -10,4 +10,7 @@ KERNEL_DTB := rockchip/rk3399-orangepi.dtb
 include $(TOP)/device/xunlong/common/kernel.mk
 
 # Include uboot and kernel to default target
-droidcore-unbundled: uboot_full kernel
+droidcore-unbundled: uboot_full kernel dtb
+
+# boot.img depends on kernel and dtb
+bootimage: kernel dtb

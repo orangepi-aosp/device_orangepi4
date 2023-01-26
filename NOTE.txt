@@ -1,2 +1,12 @@
-Flash uboot to sdcard:
-sudo dd if=u-boot-rockchip.img of=/dev/sda seek=64 conv=fsync
+1) Flash bootloader to sdcard:
+$ sudo dd if=u-boot-rockchip.img of=/dev/sda seek=64 conv=fsync
+
+2) Flash bootloader to eMMC:
+2.1) Do (1) first, then enter uboot console
+2.2) Run: => gpt write mmc 0 $partitions
+2.3) Enter fastboot: => fastboot usb 0
+2.4) From your host, run:
+$ fastboot flash loader1 ./obj/UBOOT_OBJ/rktmp/idbloader.img
+$ fastboot flash loader2 ./obj/UBOOT_OBJ/rktmp/uboot.img
+$ fastboot flash trust ./obj/UBOOT_OBJ/rktmp/trust.img
+$ fastboot reboot
