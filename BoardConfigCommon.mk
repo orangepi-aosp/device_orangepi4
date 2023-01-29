@@ -27,6 +27,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += --base 0x0 \
 BOARD_PREBUILT_DTBIMAGE_DIR := $(PRODUCT_OUT)/kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-# Kernel command lines
-GENERIC_KERNEL_CMDLINE += androidboot.hardware=opi4lts androidboot.selinux=permissive
+GENERIC_KERNEL_CMDLINE += androidboot.hardware=orangepi4 androidboot.selinux=permissive
 GENERIC_KERNEL_CMDLINE += printk.devkmsg=on
+
+# Enable ramdisk init console
+# GENERIC_KERNEL_CMDLINE += androidboot.first_stage_console=1
