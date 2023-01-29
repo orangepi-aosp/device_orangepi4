@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 $(call inherit-product, device/xunlong/orangepi4/device.mk)
 
 PRODUCT_NAME := orangepi4_lts
@@ -30,6 +33,8 @@ PRODUCT_BUILD_INIT_BOOT_IMAGE := true
 PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_SYSTEM_EXT_IMAGE := true
 # PRODUCT_BUILD_CACHE_IMAGE := true
+PRODUCT_BUILD_RECOVERY_IMAGE := true
+# PRODUCT_BUILD_VBMETA_IMAGE := true
 # PRODUCT_BUILD_ODM_IMAGE := true
 # PRODUCT_BUILD_ODM_DLKM_IMAGE := true
 PRODUCT_BUILD_VENDOR_IMAGE := true
@@ -37,3 +42,6 @@ PRODUCT_BUILD_VENDOR_DLKM_IMAGE := true
 # PRODUCT_BUILD_PRODUCT_IMAGE  := true
 # PRODUCT_BUILD_RAMDISK_IMAGE := true
 PRODUCT_BUILD_USERDATA_IMAGE := true
+
+# Super partition
+PRODUCT_BUILD_SUPER_PARTITION := true

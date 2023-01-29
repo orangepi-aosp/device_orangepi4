@@ -7,4 +7,4 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-	device/xunlong/orangepi4/fstab.ramdisk:$(TARGET_COPY_OUT_RAMDISK)/fstab.orangepi4
+	device/xunlong/orangepi4/ramdisk.fstab:$(TARGET_COPY_OUT_RAMDISK)/fstab.orangepi4

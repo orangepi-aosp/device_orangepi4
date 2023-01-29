@@ -9,6 +9,7 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Memory layouts
+BOARD_KERNEL_BASE := 0x0
 BOARD_KERNEL_OFFSET := 0x02400000
 BOARD_RAMDISK_OFFSET := 0x06000000
 
@@ -30,5 +31,11 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 GENERIC_KERNEL_CMDLINE += androidboot.hardware=orangepi4 androidboot.selinux=permissive
 GENERIC_KERNEL_CMDLINE += printk.devkmsg=on
 
-# Enable ramdisk init console
+# Enable ramdisk init console (only works with userdebug)
 # GENERIC_KERNEL_CMDLINE += androidboot.first_stage_console=1
+
+BOARD_AVB_ENABLE := false
+
+# Recovery
+BOARD_USES_FULL_RECOVERY_IMAGE := true
+TARGET_RECOVERY_FSTAB := device/xunlong/orangepi4/recovery.fstab
