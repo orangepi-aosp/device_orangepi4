@@ -8,3 +8,7 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_COPY_FILES += \
 	device/xunlong/orangepi4/ramdisk.fstab:$(TARGET_COPY_OUT_RAMDISK)/fstab.orangepi4
+
+# Recovery
+PRODUCT_COPY_FILES += \
+	device/xunlong/orangepi4/first_stage.recovery.sh:$(TARGET_COPY_OUT_RECOVERY)/first_stage.sh
